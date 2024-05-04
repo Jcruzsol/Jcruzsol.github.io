@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Information on Destinations we visited">
+	<title>Cruz Cruising Destinations</title>
+	<link rel="stylesheet" href="formatting.css">
+	<link rel="stylesheet" href="layout.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="destinations.html">Destinations</a></li>
+				<li><a href="cruise_diary.html">Cruise Diary</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div id="countdown"></div>
+	<main> <!--the drop down menu, makes it so that when u click on one of the buttons, a mneu slides down and displays information. Couldnt figure out how to open box closes other box.. -->
+		<h1>Where we went!</h1>
+		<input type="checkbox" id="toggle-costa-maya" class="toggle-checkbox">
+		<label for="toggle-costa-maya" class="destination-btn">Costa Maya, Mexico</label>
+		<div class="dropdown-content" id="costa-maya-dropdown">
+			<div class="destination-info">
+				<h2>Costa Maya, Mexico</h2>
+				<p>A little slice of paradise! You'll find a little bit of everything here, from ancient ruins like the Chacchoben to snorkeling and diving in the nearby coral reefs. With it's rich culture and beautiful landscape, Costa Maya has something for everyone.</p>
+			</div>
+		</div>
+			
+		<input type="checkbox" id="toggle-roatan-island" class="toggle-checkbox">
+		<label for="toggle-roatan-island" class="destination-btn">Roatan Island, Honduras</label>
+		<div class="dropdown-content" id="roatan-island-dropdown">
+			<div class="destination-info">
+				<h2>Roatan Island, Honduras</h2>
+				<p>Known far and wide for its beautiful white sand beaches, Roatan Island will feel like you're on a postcard. A paradise for thrill-seekers, Roatan Island has the worlds second largest coral reef, perfect for diving and swimming alongside exotic marine life.</p>
+			</div>
+		</div>
+			
+		<input type="checkbox" id="toggle-belize-city" class="toggle-checkbox">
+		<label for="toggle-belize-city" class="destination-btn">Belize City, Belize</label>
+		<div class="dropdown-content" id="belize-city-dropdown">
+			<div class="destination-info">
+				<h2>Belize City, Belize</h2>
+				<p>Belize, a melting pot for Caribbean and Central American culture and charm. Visiting the lush rainforests is a must for those looking to connect with nature. If you're feeling adventurous, try your hand at a zip-lining adventure or explore the Maya temples of Altun Ha or Xunantunich.</p>
+			</div>
+		</div>
+			
+		<input type="checkbox" id="toggle-cozumel" class="toggle-checkbox">
+		<label for="toggle-cozumel" class="destination-btn">Cozumel, Mexico</label>
+		<div class="dropdown-content" id="cozumel-dropdown">
+			<div class="destination-info">
+				<h2>Cozumel, Mexico</h2>
+				<p>An island paradise famous for its snorkeling and diving site, like the Palancar Reef, Cozumel is a beautiful mix of culture beautiful environments. Those looking for a relaxing time are going to find plenty of opportunity as well. With the many shops and restaurants at the port of call even the party people will have the time of their lives.</p>
+			</div>
+		</div>
+	</main>
+	<!--- Create and format a form with multiple field sets****
+		Include the following input types: text, date/time, radio buttons, spinners, range sliders, and check boxes
+		Create a selection list
+		Create and format a text area
+		Include at least one input that is set for a mobile keyboard type (e.g. number, email, url, etc.)
+		Validate data with patterns and field lengths
+		Validate data with by having certain fields required
+		Use the focus pseudo class to format valid and invalid selected boxes
+		Include a datalist and use it for input
+		Create a submit and cancel/reset button--->
+	
+<form id="commentForm" action="#" method="post">
+	<fieldset>
+		<legend>Leave us a comment on which destination you'd like to know more about and we'll get back to you!</legend>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required>
+		<br>
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" required> 
+	</fieldset>
+	<fieldset>
+		<legend>Destination Feedback</legend>
+		<label for="destination">Destination:</label>
+		<select id="destination" name="destination" required>
+			<option value="">Select a destination</option>
+			<option value="Costa Maya">Costa Maya</option>
+			<option value="Roatan Island">Roatan Island</option>
+			<option value="Belize City">Belize City</option>
+			<option value="Cozumel">Cozumel</option>
+		</select>
+		<br>
+		<label for="feedback">Feedback Type:</label>
+		<input list="feedback" name="feedback" required>
+		<datalist id="feedback">
+			<option value="Restaurants">
+			<option value="Bars">
+			<option value="Shops">
+			<option value="Excursions">
+			<option value="Other">
+		</datalist>
+		<br>	
+		<label for="comments">Comments:</label>
+		<textarea id="comments" name="comments" rows="4" required></textarea>
+	</fieldset>
+	<button type="submit">Submit</button>
+</form>
+<footer>
+	<div id="currentDateTime"></div>
+	<script src="functions.js"></script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,162 @@
+:root,
+::backdrop {
+  /* Sets sans-serif & mono fonts */
+  --sans-font: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir,
+    "Nimbus Sans L", Roboto, "Noto Sans", "Segoe UI", Arial, Helvetica,
+    "Helvetica Neue", sans-serif;
+  --standard-border-radius: 5px;
+
+  /* Website Color, mimics Royal Carribean Color Scheme*/
+  --bg: #061556;
+  --accent-bg: #febd11;
+  --text: #FAF9F6;
+
+}
+/* Resets box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Sets the font globally, ensures font type is set for the entire document */
+  font-family: var(--sans-font);
+  scroll-behavior: smooth;
+}
+
+/* Formats links & buttons, such as the DESTINATION, HOME, CRUISE DIARY links for easier viewing and interactions */
+a,
+a:visited {
+  color: var(--accent);
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.destination {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.destination-btn {
+    background-color: #febd11;
+	font-size: 40px;
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    display: block;
+	margin-bottom: 15px;
+}
+
+.destination-btn:hover {
+    background-color: #0073bb;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0073bb;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    width: calc(100% - 20px);
+    max-width: 800px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+/* Design choice, makes pull down menu on the destinations page have specfic images with text on them */
+#costa-maya-dropdown {
+	background-image: url("Images/mahahual-8569654_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#roatan-island-dropdown {
+	background-image: url("Images/roatan-1358175_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#belize-city-dropdown {
+	background-image: url("Images/belize-city-1327715_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#cozumel-dropdown {
+	background-image: url("Images/sunrise-3271067_1280.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+/*formats text within pull down menu*/
+.destination-info p {
+	color: black;
+	background: #FAF9F6;
+	opacity: 0.9; 
+	display: inline;
+	background-image: line(white 30%, blue 30%);
+}
+
+.destination-info h2 {
+    margin-top: 0;
+}
+
+.toggle-checkbox:checked + .destination-btn + .dropdown-content {
+    display: block;
+}
+
+#countdown {
+	font-size: 25px;
+	border: 5px solid;
+	border-radius: var(--standard-border-radius);
+	align-content: space-around;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px;
+}
+ /* Styles for the number line */
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%; /* Set width to 100% */
+}
+
+.slider-labels span {
+    flex: 1;
+    text-align: center;
+}
+
+/* Adjust the width of the slider to match the container */
+input[type="range"] {
+    width: calc(100% - 20px); /* Adjust width to match the container minus the space for the labels */
+    margin: 0 10px; /* Add margin to keep space between the slider and labels */
+}
+
+/* Style for valid input */
+input:valid {
+    border-color: green;
+}
+
+/* Style for invalid input */
+input:invalid {
+    border-color: red;
+}
+
+/* Style for focused input */
+input:focus {
+    outline-color: blue; /* Changes outline color when focused */
+}

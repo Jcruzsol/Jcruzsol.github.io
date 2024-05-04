@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the home page of my travel website, recounting my recent trip">
+    <title>Cruz Cruising Adventures</title>
+    <link rel="stylesheet" href="formatting.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="cruise_diary.html">Cruise Diary</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="countdown"></div>
+    <main>
+        <h1>Cruz Cruising Adventures</h1>
+        <h2>Welcome to my Website! Inside you'll find some of the pictures we took, explore the places we visited, and enjoy a first hand account of my experience!</h2>
+        <section>
+            <h2><a href="cruise_diary.html">Latest Diary Entry</a></h2>
+            <div class="gallery">
+                <!--gallery friom other pictures in pages, also made it so that when you click on the titles you get redirected to those pages. -->
+                <img src="Images/20240127_061348.jpg" alt="Embarkation Day">
+                <img src="Images/20240128_193417.jpg" alt="Day at Sea">
+                <img src="Images/20240201_182600.jpg" alt="Roatan Island" />
+            </div>
+        </section>
+
+        <section>
+            <h2><a href="destinations.html">Featured Destinations</a></h2>
+            <div class="gallery">
+                <img src="Images/mahahual-8569654_1280.jpg" alt="Costa Maya, Mexico">
+                <img src="Images/roatan-1358175_1280.jpg" alt="Roatan Island, Honduras">
+                <img src="Images/belize-city-1327715_1280.jpg" alt="Belize City, Belize">
+                <img src="Images/sunrise-3271067_1280.jpg" alt="Cozumel, Mexico">
+            </div>
+        </section>
+
+        <section>
+            <h1>The Enchantment of the Seas</h1>
+            <h2>Come aboard one of the classics!</h2>
+            <div class="ship-introduction">
+                <img src="Images/enchantment-of-the-seas-exterior-aerial-view.jpg">
+                <h5>Originally debuting in 1997, the Enchantment of the Seas is one of the older models in Royal Caribbeans fleet. Quaint and charming, this ship was refurbished in 2005 and is perfectly suited for new passengers as well as experienced ones.</h5>
+            </div>
+            <div class="gallery">
+                <img src="Images/IMG_8888-e1706022624633.jpeg" alt="Swimming Pool">
+                <img src="Images/17645.jpg" alt="Swimming Pool">
+                <img src="Images/RCI_Enchant_DiningRoom-720x432.jpg" alt="Dining Area">
+                <img src="Images/RCI_Enchant_WindjammerCafe-720x432.jpg" alt="Dining Area">
+                <img src="Images/royal-caribbean-entertainment-experience-grid12.jpg" alt="Entertainment">
+                <img src="Images/216-orpheustheater.jpg" alt="Entertainment">
+            </div>
+        </section>
+		        <!-- Fun Fact Section -->
+        <section>
+            <h1>Fun Facts</h1>
+            <h2 id="fun-fact"></h2>
+        </section>
+    </main>
+    <footer>
+        <div id="currentDateTime"></div>
+        <script src="functions.js"></script>
+    </footer>
+</body>
+</html>
